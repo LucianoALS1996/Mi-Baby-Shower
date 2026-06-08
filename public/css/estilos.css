@@ -1,0 +1,846 @@
+/*=======================================
+    1. PALETA DE COLORES PARA BABY SHOWER 
+  =======================================*/
+:root {
+    --color-celeste-vivo: #7cb9e8;   
+    --color-celeste-dark: #4a90e2;  
+    --color-rosa-vivo: #fca3c1;      
+    --color-rosa-dark: #f9719e;      
+    
+    /* Definimos el gradiente de día  */
+    --bg-global: linear-gradient(to right, #F6D5DA, #FDF6E3, #D4EAF5);
+    
+    --bs-primary: var(--color-celeste-vivo);
+    --bs-body-bg: #fff5f8;           
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', 'Segoe UI', sans-serif;
+    
+    background: var(--bg-global);
+    
+    background-attachment: fixed; 
+    transition: background-color 0.3s ease, background-image 0.3s ease;
+    color: #334155;
+}
+
+/*================
+ 2. BOTONES
+  ===============*/
+.btn-primary {
+    --bs-btn-bg: var(--color-celeste-vivo);
+    --bs-btn-border-color: var(--color-celeste-vivo);
+    --bs-btn-hover-bg: var(--color-celeste-dark);
+    --bs-btn-hover-border-color: var(--color-celeste-dark);
+    --bs-btn-active-bg: var(--color-celeste-dark);
+    color: #ffffff; /* Texto blanco para mayor contraste */
+    font-weight: 700;
+    border-radius: 12px;
+    padding: 0.7rem 1.6rem;
+    box-shadow: 0 4px 12px rgba(124, 185, 232, 0.4);
+    transition: all 0.2s ease;
+}
+
+/* Botón outline ROSA */
+.btn-outline-primary {
+    --bs-btn-bg: var(--color-rosa-vivo);
+    --bs-btn-border-color: var(--color-rosa-vivo);
+    --bs-btn-hover-bg: var(--color-rosa-dark);
+    --bs-btn-hover-border-color: var(--color-rosa-dark);
+    color: #ffffff;
+    font-weight: 700;
+    border-radius: 12px;
+    padding: 0.7rem 1.6rem;
+    box-shadow: 0 4px 12px rgba(252, 163, 193, 0.4);
+}
+
+/* Evita que Bootstrap pinte las letras oscuras al pasar el mouse por el botón rosa */
+.btn-outline-primary:hover {
+    color: #ffffff;
+}
+
+/* Personalización de Botón Peligro*/
+.btn-outline-danger {
+    color: #f43f5e;           
+    border-color: #fecdd3;   
+    background-color: #fff5f5; 
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-outline-danger:hover {
+    color: #ffffff;
+    background-color: #e11d48; 
+    border-color: #e11d48;
+    box-shadow: 0 4px 12px rgba(225, 29, 72, 0.2);
+}
+
+
+
+/* =============
+   3. NAVBAR 
+   =============== */
+
+.navbar {
+    background-color: #ffffff;
+    border-bottom: 3px solid var(--color-rosa-vivo); 
+    box-shadow: 0 4px 20px rgba(252, 163, 193, 0.15); 
+    padding: 0.8rem 1rem; 
+}
+
+/* Marca del sitio (MiBabyShower) */
+.navbar .brand,
+.navbar .navbar-brand.brand {
+    font-weight: 800;
+    font-size: 1.4rem;
+    color: var(--color-celeste-dark);
+    letter-spacing: -0.5px;
+    transition: color 0.2s ease;
+}
+
+.navbar .navbar-brand.brand:hover {
+    color: var(--color-celeste-vivo); 
+}
+
+/* Enlaces del Menú (Inicio, Mis Baby Showers, Crear Evento, etc.) */
+.navbar .nav-link {
+    font-weight: 700; 
+    font-size: 0.95rem;
+    color: #64748b; 
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+
+.navbar .nav-link:hover {
+    color: var(--color-rosa-dark);
+    background-color: #fff0f5; 
+}
+
+
+.navbar .nav-link.active {
+    color: var(--color-celeste-dark);
+    background-color: #e6f2ff; 
+}
+
+/* Icono del botón de cambio de modo (Luna/Sol) */
+.navbar #btn-theme-toggle:hover i {
+    color: var(--color-celeste-dark);
+    transform: scale(1.1);
+    transition: all 0.2s ease;
+}
+
+.navbar button#btn-theme-toggle.nav-link:hover i#theme-icon {
+    color: var(--color-celeste-dark);
+    transform: scale(1.15);
+    display: inline-block; 
+    transition: all 0.2s ease-in-out;
+}
+
+
+/*================
+    4. TARJETAS 
+  ==================*/
+.card {
+    border-radius: 22px;
+    border: 3px solid #ffe3ec;
+    background-color: #ffffff;
+    box-shadow: 0 6px 15px rgba(252, 163, 193, 0.08);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover {
+    transform: scale(1.04); /* Efecto de acercamiento*/
+    box-shadow: 0 15px 30px rgba(252, 163, 193, 0.25);
+    border-color: var(--color-rosa-vivo);
+}
+
+/* --Elementos de detalle dentro del Panel-- */
+
+/* Círculos contenedores de íconos */
+.icon-circle-celeste {
+    background-color: #e6f2ff;
+    color: var(--color-celeste-dark);
+}
+
+.icon-circle-rosa {
+    background-color: #ffe6ee;
+    color: var(--color-rosa-dark);
+}
+
+/* Encabezados de las secciones internas */
+.card h3 .bi-gift-fill {
+    color: var(--color-rosa-dark);
+}
+
+.card h3 .bi-people-fill {
+    color: var(--color-celeste-dark);
+}
+
+/* Bloque contenedor sin imagen cargada */
+.placeholder-image-dashed {
+    border: 2px dashed #cbd5e1;
+    background-color: #f8fafc;
+    min-height: 180px;
+}
+
+/* Tarjetas secundarias para regalos e invitados */
+.sub-card-item {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    transition: all 0.2s ease;
+}
+.sub-card-item:hover {
+    border-color: var(--color-celeste-vivo);
+    background-color: #ffffff;
+}
+
+/* Ajuste tipográfico fino para títulos de eventos */
+.style-title {
+    letter-spacing: -0.3px;
+}
+
+/* Círculo contenedor para el ícono de estado vacío */
+.empty-state-circle {
+    width: 90px;
+    height: 90px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Limitador de ancho para párrafos informativos centrados */
+.text-max-width-md {
+    max-width: 400px;
+}
+
+/* ===========================
+   5. HERO DE BIENVENIDA 
+   =========================== */
+
+.hero {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #dceeff 0%, #ffe3ee 100%);
+    border-radius: 32px;
+    margin-bottom: 3rem;
+    border: 2px solid #ffd4e3;
+    box-shadow: 0 10px 30px rgba(252, 163, 193, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.hero:hover {
+    box-shadow: 0 15px 35px rgba(252, 163, 193, 0.18);
+}
+
+/* El contenedor circular del globo */
+.baby-hero-art {
+    background: #ffffff;
+    border: 4px solid var(--color-rosa-vivo);
+    box-shadow: 0 8px 25px rgba(252, 163, 193, 0.25);
+    border-radius: 50%;
+    width: 160px;
+    height: 160px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Efecto interactivo: al pasar el cursor sobre el Hero, el círculo flota y gira levemente */
+.hero:hover .baby-hero-art {
+    transform: translateY(-10px) rotate(5deg);
+}
+
+/* El ícono del globo con corazón animado */
+.baby-hero-art .bi-balloon-heart-fill {
+    color: var(--color-rosa-dark);
+    font-size: 4.5rem; 
+    display: inline-block;
+    animation: flotarGlobo 3s ease-in-out infinite alternate;
+}
+
+/* Animación de flotación suave */
+@keyframes flotarGlobo {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-6px);
+    }
+}
+
+/* --Ajuste de color para los títulos e íconos de las tarjetas de presentación-- */
+
+/* Tarjeta 1 (Invitados) - Toques Celestes */
+.row .col-md-4:nth-child(1) .card-title {
+    color: var(--color-celeste-dark);
+}
+.row .col-md-4:nth-child(1) .bi {
+    color: var(--color-celeste-vivo);
+}
+
+/* Tarjeta 2 (Regalos) - Toques Rosas */
+.row .col-md-4:nth-child(2) .card-title {
+    color: var(--color-rosa-dark);
+}
+.row .col-md-4:nth-child(2) .bi {
+    color: var(--color-rosa-vivo);
+}
+
+/* Tarjeta 3 (Invitaciones) - Toques Celestes */
+.row .col-md-4:nth-child(3) .card-title {
+    color: var(--color-celeste-dark);
+}
+.row .col-md-4:nth-child(3) .bi {
+    color: var(--color-celeste-vivo);
+}
+
+/* =======================================================
+   6. ESTILOS PARA PANTALLAS DE ACCESO Y FORMULARIOS
+   ====================================================== */
+
+/* Suavizar las etiquetas de los formularios */
+.form-label {
+    font-weight: 600;
+    color: #4a5568;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Transformación de los inputs con bordes más vivos */
+.form-control {
+    border-radius: 12px;
+    border: 2px solid #e1b3c4; 
+    padding: 0.75rem 1.1rem; 
+    color: #1a2a3a; 
+    background-color: #ffffff;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+
+.form-control::placeholder {
+    color: #a0aec0;
+    font-weight: 400;
+}
+
+/* Interactividad del Input al clickearlos*/
+.form-control:focus {
+    color: #1a2a3a;
+    background-color: #ffffff;
+    border-color: var(--color-celeste-vivo); 
+    outline: 0;
+    box-shadow: 0 0 0 4px rgba(74, 184, 226, 0.2); 
+}
+
+/* Enlaces secundarios dentro de las tarjetas de acceso (ej: "¿Olvidaste tu contraseña?") */
+.card-body a.text-decoration-none {
+    color: var(--color-rosa-dark);
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.card-body a.text-decoration-none:hover {
+    color: var(--color-rosa-vivo); 
+    text-decoration: underline; 
+}
+
+/* Alertas de error en accesos o validaciones */
+.alert-danger {
+    background-color: #fff0f3;
+    border: 1px solid #ffccd5;
+    color: #ff4d6d;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+
+/* Globos con color rosa en el Login */
+html body .bi-balloon-heart,
+html body .bi-balloon-heart-fill {
+    color: var(--color-rosa-dark) !important;
+}
+
+/* Clases personalizadas para íconos en formularios */
+.icon-form-celeste {
+    color: var(--color-celeste-dark) !important;
+}
+
+.icon-form-rosa {
+    color: var(--color-rosa-dark) !important;
+}
+
+/* Control estructural del campo de texto */
+.textarea-no-resize {
+    resize: none;
+}
+
+/* Ajustes automáticos para que luzcan bien en Modo Oscuro */
+[data-bs-theme="dark"] .icon-form-celeste {
+    color: var(--color-celeste-vivo) !important; 
+}
+
+[data-bs-theme="dark"] .icon-form-rosa {
+    color: var(--color-rosa-vivo) !important; 
+}
+
+/* Miniatura de previsualización para portadas en formularios de edición */
+.img-preview-edit {
+    max-height: 180px;
+    width: auto; /* Mantiene la proporción */
+    object-fit: cover;
+}
+
+/* ====================================
+   7. PERSONALIZACIÓN DEL FOOTER 
+   ==================================== */
+
+footer, 
+.footer {
+    background: linear-gradient(180deg, #ffffff 0%, #ffeef4 100%); 
+    border-top: 2px solid #ffd4e3; 
+    color: #6c7d93;
+    font-size: 0.9rem;
+    padding: 2rem 0; 
+    font-weight: 500;
+}
+
+footer a, 
+.footer a {
+    color: var(--color-rosa-dark);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+footer a:hover, 
+.footer a:hover {
+    color: var(--color-rosa-vivo);
+    text-decoration: underline;
+}
+
+/* El pequeño corazón latiendo */
+footer .bi-heart-fill, 
+footer .text-danger {
+    color: var(--color-rosa-dark);
+    display: inline-block; 
+    animation: latidoCorazon 1.5s infinite ease-in-out; 
+}
+
+/* Animación de latido */
+@keyframes latidoCorazon {
+    0% { transform: scale(1); }
+    30% { transform: scale(1.18); }
+    60% { transform: scale(1); }
+    100% { transform: scale(1); }
+}
+
+/* ==========================================================================
+   8. ESTILOS PARA EL DASHBOARD Y DETALLES DE EVENTOS (Tarjetas y Paneles)
+   ========================================================================== */
+
+/* Asegura que la tarjeta del dashboard tenga las esquinas perfectas para su footer */
+.card.h-100 {
+    border-radius: 16px !important;
+    overflow: hidden; /* Evita que el fondo del footer se salga de los límites */
+}
+
+/* Badge de Estado: Evento Activo / Disponible */
+.badge-activo {
+    background-color: #d1ebd5;
+    color: #1e4620;
+    font-weight: 700;
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+}
+
+/* Badge de Estado: Evento Inactivo / No Disp.  */
+.badge-inactivo {
+    background-color: #f0e4e8;
+    color: #634d54;
+    font-weight: 700;
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+}
+
+/* Badges secundarios para los estados de invitación y asistencia del invitado */
+.badge-info-custom {
+    background-color: #e6f2ff;
+    color: var(--color-celeste-dark);
+    font-weight: 600;
+    font-size: 0.78rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+/* Items de información en la tarjeta del dashboard */
+.event-info-item {
+    font-size: 0.95rem;
+    color: #4a5d73;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.event-info-item i {
+    font-size: 1.1rem;
+}
+
+/* Iconos para el dashboard */
+.event-info-item .bi-calendar-event,
+.event-info-item .bi-geo-alt {
+    color: var(--color-celeste-dark);
+}
+
+.event-info-item .bi-people,
+.event-info-item .bi-gift {
+    color: var(--color-rosa-dark);
+}
+
+/* Sub-tarjetas internas para las listas de Regalos y Amigos */
+.sub-card-item {
+    background-color: #ffffff;
+    border: 1px solid #f3e1e7;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(252, 163, 193, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sub-card-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(252, 163, 193, 0.1);
+    border-color: var(--color-rosa-vivo);
+}
+
+/*  ESTADO POR DEFECTO (Modo Claro) */
+.input-url-readonly {
+    background-color: #fff9fb; 
+    border: 1px dashed #e1b3c4; 
+    color: #506680; 
+    font-family: monospace;
+    font-size: 0.85rem;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+/*  ESTADO EN MODO OSCURO */
+html[data-bs-theme="dark"] body .input-url-readonly {
+    background-color: #1e293b; 
+    border: 1px dashed #475569; 
+    color: #f8fafc; 
+}
+
+/* Botón principal ("Gestionar Evento") */
+.btn-action-view {
+    background-color: var(--color-celeste-vivo);
+    border-color: var(--color-celeste-vivo);
+    color: #ffffff;
+    font-weight: 700;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-action-view:hover {
+    background-color: var(--color-celeste-dark);
+    border-color: var(--color-celeste-dark);
+    color: #ffffff;
+}
+
+/* Contenedor inferior de acciones en la tarjeta del dashboard */
+.card-footer-actions {
+    border-top: 1px solid #fce6ee;
+    background-color: #fffbfd;
+    padding: 0.8rem 1.2rem;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+
+
+
+
+/* Bloque de descripción destacada del evento */
+.event-description-box {
+    border-left-color: var(--color-rosa-vivo) !important;
+}
+.event-description-title {
+    letter-spacing: 0.8px;
+    font-size: 0.75rem;
+    color: var(--color-rosa-vivo) !important;
+}
+.event-description-text {
+    font-size: 0.95rem;
+}
+
+/* Imagen de portada en vista de detalles */
+.img-cover-detail {
+    max-height: 220px;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Marcador de posición para eventos sin imagen asignada */
+.img-placeholder-detail {
+    min-height: 220px;
+    border-style: dashed !important;
+    border-width: 2px !important;
+}
+.img-placeholder-icon-wrap {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(var(--bs-primary-rgb), 0.1);
+}
+.img-placeholder-icon {
+    color: var(--color-rosa-vivo);
+}
+.text-size-sm {
+    font-size: 0.8rem;
+}
+
+/* Modificadores de fuentes de texto y listados */
+.text-size-md {
+    font-size: 0.82rem;
+}
+.text-size-xs {
+    font-size: 0.75rem;
+}
+
+/* Iconos de estados vacíos en sub-tarjetas */
+.sub-card-empty-icon {
+    color: #cbd5e1;
+}
+
+/* Ajustes para inputs de URL de lectura e interactividad */
+.label-url-readonly {
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+/* Clase de utilidad para JavaScript (Estados deshabilitados limpios) */
+.btn-sending-state {
+    opacity: 0.7;
+}
+
+
+
+
+
+/* ========================
+   9. MODO OSCURO 
+   ======================== */
+
+/* 1. CONFIGURACIÓN DEL LIENZO Y FONDO GLOBAL*/
+[data-bs-theme="dark"] {
+    /* Cambiamos el gradiente de 3 tonos pastel por el gradiente oscuro */
+    --bg-global: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+    color: #f8fafc;
+}
+
+/* Títulos principales e información destacada */
+[data-bs-theme="dark"] h1, [data-bs-theme="dark"] h2, [data-bs-theme="dark"] h3, 
+[data-bs-theme="dark"] h4, [data-bs-theme="dark"] h5, [data-bs-theme="dark"] h6,
+[data-bs-theme="dark"] strong, [data-bs-theme="dark"] .card-title {
+    color: #ffffff;
+}
+
+/* Descripciones, etiquetas y textos secundarios  */
+[data-bs-theme="dark"] label, [data-bs-theme="dark"] .form-text {
+    color: #cbd5e1;
+}
+
+/* 2. COMPONENTES DE NAVEGACIÓN GLOBAL (NAVBAR Y FOOTER)  */
+[data-bs-theme="dark"] .navbar {
+    background-color: #1e1b4b; 
+    border-bottom: 1px solid #334155;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+[data-bs-theme="dark"] .navbar .nav-link,
+[data-bs-theme="dark"] .navbar .navbar-brand {
+    color: #f1f5f9; 
+}
+
+/* Efecto Hover para los enlaces de la Navbar */
+[data-bs-theme="dark"] .navbar-nav .nav-link:hover {
+    color: var(--color-rosa-vivo);
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Enlace activo de la Navbar */
+[data-bs-theme="dark"] .navbar-nav .nav-link.active {
+    color: var(--color-celeste-vivo);
+    background-color: rgba(124, 185, 232, 0.15);
+}
+
+/* Ajuste del Footer */
+[data-bs-theme="dark"] footer,
+[data-bs-theme="dark"] .footer {
+    background: #1e1b4b; 
+    border-top: 1px solid #334155;
+}
+
+/* 3. ESTRUCTURA DE TARJETAS Y CONTENEDORES INTERNOS  */
+[data-bs-theme="dark"] .card {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Contenedores secundarios internos  */
+[data-bs-theme="dark"] .sub-card-item,
+[data-bs-theme="dark"] .list-group-item {
+    background-color: #0f172a;
+    border-color: #334155;
+}
+
+/* Asegura los cierres/footers de las tarjetas */
+[data-bs-theme="dark"] .card-footer,
+[data-bs-theme="dark"] .card-footer-actions,
+[data-bs-theme="dark"] .card .border-top {
+    background-color: #111827;
+    border-color: #334155;
+}
+
+/* Bloque Hero Principal (Home) */
+[data-bs-theme="dark"] .hero {
+    background: rgba(30, 41, 59, 0.7); 
+    backdrop-filter: blur(8px);
+    border: 2px solid #334155;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+[data-bs-theme="dark"] .hero h1,
+[data-bs-theme="dark"] .hero p {
+    color: #ffffff;
+}
+
+[data-bs-theme="dark"] .hero .baby-hero-art {
+    background-color: #0f172a;
+    border-color: #475569;
+    color: #94a3b8;
+}
+
+/*  4. DISEÑO DE FORMULARIOS E INPUTS  */
+[data-bs-theme="dark"] .form-control {
+    background-color: #1e293b;
+    border: 1px solid #475569;
+    color: #ffffff;
+}
+
+[data-bs-theme="dark"] .form-control:focus {
+    background-color: #1e293b;
+    color: #ffffff;
+    border-color: var(--color-celeste-dark, #0d6efd);
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/*  5. REDISEÑO TOTAL DE BADGES (ETIQUETAS DE ESTADO)  */
+[data-bs-theme="dark"] .badge,
+[data-bs-theme="dark"] .badge-activo,
+[data-bs-theme="dark"] .badge-inactivo,
+[data-bs-theme="dark"] .badge-info-custom,
+[data-bs-theme="dark"] [class*="badge"] {
+    background-color: #334155;
+    color: #38bdf8;
+    border: 1px solid #475569;
+    font-weight: 700;
+}
+
+/*  6. BOTONES en  Modo Oscuro  */
+
+/* Botón Celeste */
+[data-bs-theme="dark"] .btn-primary,
+[data-bs-theme="dark"] .btn-action-view,
+[data-bs-theme="dark"] .btn-gestion-custom {
+    background-color: var(--color-celeste-dark);
+    border-color: var(--color-celeste-dark);
+    color: #ffffff;
+    box-shadow: none;
+    transition: all 0.2s ease-in-out;
+}
+[data-bs-theme="dark"] .btn-primary:hover,
+[data-bs-theme="dark"] .btn-action-view:hover,
+[data-bs-theme="dark"] .btn-gestion-custom:hover {
+    background-color: var(--color-celeste-vivo);
+    border-color: var(--color-celeste-vivo);
+    box-shadow: 0 4px 12px rgba(124, 185, 232, 0.25);
+}
+
+/* Botón Rosa  */
+[data-bs-theme="dark"] .btn-outline-primary {
+    background-color: var(--color-rosa-dark);
+    border-color: var(--color-rosa-dark);
+    color: #ffffff;
+    box-shadow: none;
+    transition: all 0.2s ease-in-out;
+}
+[data-bs-theme="dark"] .btn-outline-primary:hover {
+    background-color: var(--color-rosa-vivo);
+    border-color: var(--color-rosa-vivo);
+    box-shadow: 0 4px 12px rgba(252, 163, 193, 0.25);
+}
+
+/* Botón Secundario / Editar */
+[data-bs-theme="dark"] .btn-light,
+[data-bs-theme="dark"] .btn-outline-secondary {
+    background-color: #334155;
+    border: 1px solid #475569;
+    color: #e2e8f0;
+    box-shadow: none;
+    transition: all 0.2s ease-in-out;
+}
+[data-bs-theme="dark"] .btn-light:hover,
+[data-bs-theme="dark"] .btn-outline-secondary:hover {
+    background-color: #475569; 
+    border-color: #64748b;
+    color: #ffffff;
+}
+
+/* Botón de Acción Crítica / Peligro (Cerrar sesión, Deshabilitar, etc) */
+[data-bs-theme="dark"] .btn-outline-danger {
+    background-color: rgba(244, 63, 94, 0.1);
+    border-color: #f43f5e;
+    color: #fda4af;
+    box-shadow: none;
+}
+[data-bs-theme="dark"] .btn-outline-danger:hover {
+    background-color: #e11d48;
+    border-color: #e11d48;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(225, 29, 72, 0.35);
+}
+
+/*  7. CORRECCIÓN PARA CÍRCULOS DE ÍCONOS DE DETALLE  */
+[data-bs-theme="dark"] .icon-circle-celeste {
+    background-color: rgba(124, 185, 232, 0.15);
+    border: 1px solid rgba(124, 185, 232, 0.3);
+    color: var(--color-celeste-vivo);
+}
+
+[data-bs-theme="dark"] .icon-circle-rosa {
+    background-color: rgba(252, 163, 193, 0.15);
+    border: 1px solid rgba(252, 163, 193, 0.3);
+    color: var(--color-rosa-vivo);
+}
+
+/* 8. EFECTOS INTERACTIVOS (HOVER)   */
+[data-bs-theme="dark"] .card:hover {
+    border-color: var(--color-rosa-vivo) !important;
+    box-shadow: 0 15px 30px rgba(252, 163, 193, 0.35);
+}
+
+[data-bs-theme="dark"] .hero:hover {
+    border-color: var(--color-rosa-vivo) !important; 
+    box-shadow: 0 15px 40px rgba(252, 163, 193, 0.35) !important;
+}
+
+
+
+
+
+
