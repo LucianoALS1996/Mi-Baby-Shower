@@ -78,6 +78,26 @@ body {
 }
 
 
+/* Ajustes para los botones secundarios (Cancelar, Volver, etc) */
+.btn-outline-secondary {
+    
+    --bs-btn-color: #ffffff;                      
+    --bs-btn-bg: var(--color-rosa-vivo);          
+    --bs-btn-border-color: var(--color-rosa-vivo);
+    
+    
+    --bs-btn-hover-color: #ffffff;                
+    --bs-btn-hover-bg: var(--color-rosa-dark);    
+    --bs-btn-hover-border-color: var(--color-rosa-dark); 
+    
+    
+    --bs-btn-focus-shadow-rgb: 252, 163, 193; 
+    --bs-btn-active-color: #ffffff;
+    --bs-btn-active-bg: var(--color-rosa-dark);
+    --bs-btn-active-border-color: var(--color-rosa-dark);
+}
+
+
 
 
   /* ------------ 3. NAVBAR -----------------------*/
@@ -784,19 +804,33 @@ html[data-bs-theme="dark"] body .input-url-readonly {
 }
 
 /* Botón Secundario / Editar */
-[data-bs-theme="dark"] .btn-light,
-[data-bs-theme="dark"] .btn-outline-secondary {
+
+[data-bs-theme="dark"] .btn-light {
     background-color: #334155;
     border: 1px solid #475569;
     color: #e2e8f0;
     box-shadow: none;
     transition: all 0.2s ease-in-out;
 }
-[data-bs-theme="dark"] .btn-light:hover,
-[data-bs-theme="dark"] .btn-outline-secondary:hover {
+[data-bs-theme="dark"] .btn-light:hover {
     background-color: #475569; 
     border-color: #64748b;
     color: #ffffff;
+}
+
+
+[data-bs-theme="dark"] .btn-outline-secondary {
+    --bs-btn-color: #fda4af; 
+    --bs-btn-border-color: rgba(252, 163, 193, 0.4); 
+    --bs-btn-hover-color: #ffffff;
+    --bs-btn-hover-bg: var(--color-rosa-dark);
+    --bs-btn-hover-border-color: var(--color-rosa-dark);
+    --bs-btn-focus-shadow-rgb: 252, 163, 193;
+    --bs-btn-active-color: #ffffff;
+    --bs-btn-active-bg: var(--color-rosa-dark);
+    --bs-btn-active-border-color: var(--color-rosa-dark);
+    box-shadow: none;
+    transition: all 0.2s ease-in-out;
 }
 
 /* Botón de Acción Crítica / Peligro (Cerrar sesión, Deshabilitar, etc) */
