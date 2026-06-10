@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="mb-4">
-    <h1 class="mb-1">Agregar invitado</h1>
+    <h1 class="mb-1">Agregar Invitado</h1>
 
     <p class="text-muted mb-0">
         Evento: {{ $babyshower->titulo }}
