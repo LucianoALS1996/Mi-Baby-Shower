@@ -48,7 +48,7 @@
                         </h2>
 
                         <p class="text-muted mb-4 fs-5">
-                            Por favor confirma si podrás asistir al baby shower.
+                            Por favor confirma si podrás asistir al baby shower, es importante tu presencia.
                         </p>
 
                         <div class="d-flex flex-column flex-md-row justify-content-center gap-2">
@@ -63,7 +63,7 @@
                             <form method="POST" action="{{ route('invitacion.rechazar', $invitado->token_invitacion) }}">
                                 @csrf
                                 <button type="submit" class="btn btn-outline-secondary px-4 py-2 fw-semibold w-100">
-                                    <i class="bi bi-x-lg me-1"></i> No podré asistir
+                                    <i class="bi bi-x-lg me-1"></i> No podré asistir. Lo siento
                                 </button>
                             </form>
 
@@ -216,7 +216,7 @@
                             ¿Prefieres llevar un regalo diferente?
                         </h3>
                         <p class="text-muted mb-0 small fw-semibold">
-                            Si no encuentras algo de tu agrado en la lista, siéntete libre de asistir con un obsequio de tu propia elección.
+                            Si no encuentras algo de tu agrado en la lista, siéntete libre de asistir con un obsequio de tu propia elección. Te esperamos ;)
                         </p>
                     </div>
                 </div>
@@ -265,7 +265,7 @@
                     <div class="card-body p-4 text-center">
 
                         <h2 class="mb-3 fw-bold text-body">
-                            Has indicado que no podrás asistir.
+                            Has indicado que no podrás asistir, que pena.
                         </h2>
 
                         <p class="text-muted mb-4 fs-5">
