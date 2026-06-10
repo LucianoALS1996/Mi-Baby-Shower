@@ -5,7 +5,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-7 text-center text-lg-start">
-                    <h1 class="display-5 fw-bold text-body">Organiza el baby shower perfecto</h1>
+                    <h1 class="display-5 fw-bold text-body">Organiza tu baby shower perfecto</h1>
                     <p class="lead text-muted">Gestiona invitados, regalos e invitaciones de manera sencilla y elegante.</p>
                     <p class="mt-4">
                         <a href="{{ route('register') }}" class="btn btn-primary btn-lg me-2 fw-semibold shadow-sm">
@@ -47,7 +47,7 @@
                             <i class="bi bi-gift-fill fs-2"></i>
                         </div>
                         <h5 class="card-title fw-bold text-body fs-5">Regalos</h5>
-                        <p class="card-text text-muted small">Administra la lista de regalos y evita que se dupliquen.</p>
+                        <p class="card-text text-muted small">Administra tu lista de regalos y evita que se dupliquen.</p>
                     </div>
                 </div>
             </div>
@@ -59,7 +59,7 @@
                             <i class="bi bi-envelope-paper-heart-fill fs-2"></i>
                         </div>
                         <h5 class="card-title fw-bold text-body fs-5">Invitaciones</h5>
-                        <p class="card-text text-muted small">Crea y envía invitaciones hermosas a través de links o email.</p>
+                        <p class="card-text text-muted small">Crea y envía invitaciones  a través de emails.</p>
                     </div>
                 </div>
             </div>
