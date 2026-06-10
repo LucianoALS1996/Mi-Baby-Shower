@@ -10,7 +10,7 @@
                     <h1 class="h4 text-center mb-3">Recuperar contraseña</h1>
 
                     <p class="text-muted text-center mb-4">
-                        Ingresa tu correo y te enviaremos un enlace para crear una nueva contraseña.
+                        Ingresa tu correo y te mandaremos un enlace para que puedas crear una nueva contraseña.
                     </p>
 
                     @if (session('success'))
