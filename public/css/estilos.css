@@ -1,6 +1,6 @@
-/*=======================================
-    1. PALETA DE COLORES PARA BABY SHOWER 
-  =======================================*/
+
+   /* ---------------1. PALETA DE COLORES PARA BABY SHOWER----------------------- */
+  
 :root {
     --color-celeste-vivo: #7cb9e8;   
     --color-celeste-dark: #4a90e2;  
@@ -26,9 +26,9 @@ body {
     color: #334155;
 }
 
-/*================
- 2. BOTONES
-  ===============*/
+
+ /* --------------2. BOTONES --------------------- */
+
 .btn-primary {
     --bs-btn-bg: var(--color-celeste-vivo);
     --bs-btn-border-color: var(--color-celeste-vivo);
@@ -79,9 +79,9 @@ body {
 
 
 
-/* =============
-   3. NAVBAR 
-   =============== */
+
+  /* ------------ 3. NAVBAR -----------------------*/
+    
 
 .navbar {
     background-color: #ffffff;
@@ -141,9 +141,9 @@ body {
 }
 
 
-/*================
-    4. TARJETAS 
-  ==================*/
+
+  /* ------------------4. TARJETAS -------------------*/
+
 .card {
     border-radius: 22px;
     border: 3px solid #ffe3ec;
@@ -218,9 +218,8 @@ body {
     max-width: 400px;
 }
 
-/* ===========================
-   5. HERO DE BIENVENIDA 
-   =========================== */
+
+  /* ----------------- 5. HERO DE BIENVENIDA -------------------*/
 
 .hero {
     padding: 5rem 0;
@@ -260,17 +259,16 @@ body {
     color: var(--color-rosa-dark);
     font-size: 4.5rem; 
     display: inline-block;
-    animation: flotarGlobo 3s ease-in-out infinite alternate;
+    animation: latido 1.2s ease-in-out infinite;
 }
 
-/* Animación de flotación suave */
-@keyframes flotarGlobo {
-    0% {
-        transform: translateY(0);
-    }
-    100% {
-        transform: translateY(-6px);
-    }
+/* Latido del Corazón principal */
+@keyframes latido {
+    0% { transform: scale(1); }
+    15% { transform: scale(1.25); } 
+    30% { transform: scale(1); }
+    45% { transform: scale(1.15); } 
+    70% { transform: scale(1); }
 }
 
 /* --Ajuste de color para los títulos e íconos de las tarjetas de presentación-- */
@@ -299,9 +297,9 @@ body {
     color: var(--color-celeste-vivo);
 }
 
-/* =======================================================
-   6. ESTILOS PARA PANTALLAS DE ACCESO Y FORMULARIOS
-   ====================================================== */
+ 
+  /* -------------------- 6. ESTILOS PARA PANTALLAS DE ACCESO Y FORMULARIOS ------------------*/
+
 
 /* Suavizar las etiquetas de los formularios */
 .form-label {
@@ -395,9 +393,9 @@ html body .bi-balloon-heart-fill {
     object-fit: cover;
 }
 
-/* ====================================
-   7. PERSONALIZACIÓN DEL FOOTER 
-   ==================================== */
+
+  /* -------------------- 7. PERSONALIZACIÓN DEL FOOTER ------------------ */
+
 
 footer, 
 .footer {
@@ -439,9 +437,9 @@ footer .text-danger {
     100% { transform: scale(1); }
 }
 
-/* ==========================================================================
-   8. ESTILOS PARA EL DASHBOARD Y DETALLES DE EVENTOS (Tarjetas y Paneles)
-   ========================================================================== */
+
+  /* ----------- 8. ESTILOS PARA EL DASHBOARD Y DETALLES DE EVENTOS (Tarjetas y Paneles) ------*/
+
 
 /* Asegura que la tarjeta del dashboard tenga las esquinas perfectas para su footer */
 .card.h-100 {
@@ -630,9 +628,9 @@ html[data-bs-theme="dark"] body .input-url-readonly {
 
 
 
-/* ========================
-   9. MODO OSCURO 
-   ======================== */
+
+   /* ------------- 9. MODO OSCURO  ------------------*/
+
 
 /* 1. CONFIGURACIÓN DEL LIENZO Y FONDO GLOBAL*/
 [data-bs-theme="dark"] {
