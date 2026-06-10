@@ -96,7 +96,7 @@ class InvitadoController extends Controller
 
 
 
-    
+
     public function destroy(int $idBabyshower, int $idInvitado)
     {
         $babyshower = Babyshower::where('id_babyshower', $idBabyshower)
@@ -195,6 +195,12 @@ class InvitadoController extends Controller
             $claveCooldown => now()->addSeconds(30)
         ]); // guarda cooldown en session para evitar spam inmediato
 
+
+        $invitado->estado_invitacion = 'enviada';
+        $invitado->save();
+
+
+
         return redirect()
             ->route('babyshowers.invitados.index', $idBabyshower)
             ->with('success', 'Invitación enviada correctamente.');
@@ -246,11 +252,19 @@ class InvitadoController extends Controller
                         ->subject('Invitación Baby Shower');
                 }
             );
+
+            $invitado->estado_invitacion = 'enviada';
+            $invitado->save();
         }
 
         session([
             $claveCooldown => now()->addSeconds(30)
         ]); // guarda cooldown masivo en session
+
+
+
+
+
 
         return redirect()
             ->back()
